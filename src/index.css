@@ -1,0 +1,100 @@
+/* ---------- Global CSS Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Colour variables ----------
+   ThemeContext overwrites the first 7 colours when a theme is applied.
+   The "hover" colours are calculated from them automatically. */
+:root {
+  --bg-color: #0f0f14;
+  --surface-color: #17171f;
+  --text-color: #f2f2f7;
+  --text-muted: #9a9aab;
+  --accent-color: #7c5cff;
+  --accent-text: #ffffff;
+  --border-color: #2a2a36;
+
+  --surface-hover: #1f1f2a;
+  --accent-hover: #6a48ff;
+  --surface-hover: color-mix(in srgb, var(--text-color) 8%, var(--surface-color));
+  --accent-hover: color-mix(in srgb, var(--accent-color) 82%, black);
+
+  --danger-color: #ff5c7a;
+  --radius: 14px;
+  --transition: 0.25s ease;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Shared container used by every page */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0 20px;
+}
+
+.section-heading h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.section-heading a {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Shared responsive grid (wallpapers, themes, categories) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.link-btn {
+  background: none;
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: underline;
+}

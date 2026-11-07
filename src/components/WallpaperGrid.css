@@ -1,0 +1,43 @@
+/* ---------- loading skeleton ---------- */
+.skeleton-card {
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background: linear-gradient(
+    100deg,
+    var(--surface-color) 30%,
+    var(--surface-hover) 50%,
+    var(--surface-color) 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+
+/* ---------- error box ---------- */
+.status-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 10px 0 20px;
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+}
+
+.status-message svg {
+  color: var(--danger-color);
+}
+
+.empty-message {
+  color: var(--text-muted);
+  padding: 40px 0;
+  text-align: center;
+}

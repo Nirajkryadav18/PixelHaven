@@ -1,0 +1,30 @@
+.footer {
+  border-top: 1px solid var(--border-color);
+  padding: 26px 0;
+  margin-top: 60px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-link {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 16px;
+  font-size: 1.2rem;
+}
+
+.footer-icons a:hover {
+  color: var(--accent-color);
+}
